@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+#app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+}
+.product {
+  display: flex;
+}
+
+.product__image {
+  margin-right: 5rem;
+  border: 2px solid #d3d3d3;
+  /* padding: 1rem; */
+}
+
+.product__info {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
