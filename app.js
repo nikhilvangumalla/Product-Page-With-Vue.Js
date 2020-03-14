@@ -1,9 +1,7 @@
 let app = new Vue({
   el: '#app',
   data: {
-    productName: 'Amer Thea Chair',
-    image: './images/Amer Thea Chair.webp',
-    inStock: true,
+    selectedVarient: 0,
     details: [
       '100% Mango Wood',
       'Assembly - No',
@@ -12,16 +10,18 @@ let app = new Vue({
     ],
     varients: [
       {
-        varientId: 10627505,
-        varientColor: 'darkgrey',
-        varientImage: './images/Amer Thea Chair.webp',
-        varientName: 'Amer Thea Chair'
+        id: 10627505,
+        color: 'darkgrey',
+        image: './images/Amer Thea Chair.webp',
+        name: 'Amer Thea Chair',
+        quantity: 10
       },
       {
-        varientId: 10627504,
-        varientColor: '#e7daca',
-        varientImage: './images/Amer Lorn Chair.webp',
-        varientName: 'Amer Lorn Chair'
+        id: 10627504,
+        color: '#e7daca',
+        image: './images/Amer Lorn Chair.webp',
+        name: 'Amer Lorn Chair',
+        quantity: 0
       }
     ],
     cart: 0
@@ -34,9 +34,19 @@ let app = new Vue({
         this.cart -= 1;
       }
     },
-    updateProduct(varientName, varientImage) {
-      this.productName = varientName;
-      this.image = varientImage;
+    updateProduct(index) {
+      this.selectedVarient = index;
+    }
+  },
+  computed: {
+    productName() {
+      return this.varients[this.selectedVarient].name;
+    },
+    image() {
+      return this.varients[this.selectedVarient].image;
+    },
+    inStock() {
+      return this.varients[this.selectedVarient].quantity;
     }
   }
 });
