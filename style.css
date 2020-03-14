@@ -21,10 +21,26 @@ body {
 .product__image {
   margin-right: 5rem;
   border: 2px solid #d3d3d3;
-  /* padding: 1rem; */
+}
+
+img {
+  width: 300px;
 }
 
 .product__info {
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+h1,
+p,
+h3,
+ul {
+  margin-bottom: 1rem;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
 }
