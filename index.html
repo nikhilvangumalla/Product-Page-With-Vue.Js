@@ -10,10 +10,10 @@
     <div id="app">
       <div class="product">
         <div class="product__image">
-          <img src="images/Amer Lorn Chair.webp" alt="Lorn chair" />
+          <img :src="image" :alt="productName" />
         </div>
         <div class="product__info">
-          <h1>chair</h1>
+          <h1>{{productName}}</h1>
         </div>
       </div>
     </div>
