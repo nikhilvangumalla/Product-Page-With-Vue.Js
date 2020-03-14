@@ -44,3 +44,24 @@ li {
   margin-bottom: 0.5rem;
   margin-left: 1rem;
 }
+
+.btn {
+  padding: 1rem;
+  background-color: #33a1e0;
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+
+.cart {
+  padding: 0.9rem;
+  border: 0.1rem solid;
+  border-radius: 0.3rem;
+  display: inline;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}

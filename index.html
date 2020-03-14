@@ -21,10 +21,20 @@
             <li v-for="detail in details">{{detail}}</li>
           </ul>
           <div v-for="varient in varients" :key="varient.varientId">
-            <p>
-              {{varient.varinetColor}}
+            <p
+              @mouseover="updateProduct(varient.varientName,varient.varientImage)"
+              class="cursorPointer"
+            >
+              {{varient.varientColor}}
             </p>
           </div>
+          <button class="btn cursorPointer" v-on:click="cart +=1">
+            Add to Cart
+          </button>
+          <div class="cart">cart ({{cart}})</div>
+          <button class="btn cursorPointer" @click="removeFromCart">
+            Remove from Cart
+          </button>
         </div>
       </div>
     </div>
