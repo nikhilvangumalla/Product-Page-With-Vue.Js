@@ -25,6 +25,7 @@ body {
 
 img {
   width: 300px;
+  object-fit: cover;
 }
 
 .product__info {
@@ -43,6 +44,14 @@ li {
   list-style: none;
   margin-bottom: 0.5rem;
   margin-left: 1rem;
+}
+
+.colorRound {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 10rem;
+  display: inline-block;
+  margin: 0 1rem 1rem 0;
 }
 
 .btn {
@@ -64,4 +73,12 @@ li {
 
 .cursorPointer {
   cursor: pointer;
+}
+
+.disableButton {
+  background-color: #747474;
+}
+
+.lineThrough {
+  text-decoration: line-through;
 }

@@ -13,13 +13,13 @@ let app = new Vue({
     varients: [
       {
         varientId: 10627505,
-        varientColor: 'Dark Grey',
+        varientColor: 'darkgrey',
         varientImage: './images/Amer Thea Chair.webp',
         varientName: 'Amer Thea Chair'
       },
       {
         varientId: 10627504,
-        varientColor: 'Light Grey',
+        varientColor: '#e7daca',
         varientImage: './images/Amer Lorn Chair.webp',
         varientName: 'Amer Lorn Chair'
       }
