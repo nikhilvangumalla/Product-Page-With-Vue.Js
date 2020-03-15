@@ -13,6 +13,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60vw;
+  font-size: 1rem;
 }
 .product {
   display: flex;
@@ -29,7 +30,6 @@ img {
 }
 
 .product__info {
-  font-size: 1rem;
   text-transform: uppercase;
 }
 
@@ -56,12 +56,21 @@ li {
 
 .btn {
   padding: 1rem;
-  background-color: #33a1e0;
+  background-color: #237fb4;
   outline: none;
   border: none;
   color: white;
   border-radius: 0.3rem;
-  font-size: 1rem;
+  transition: transform 0.2s;
+  font-size: inherit;
+}
+
+.btn:hover {
+  background-color: #52a8da;
+}
+
+.btn:active {
+  transform: scale(0.9);
 }
 
 .cart {
@@ -69,6 +78,10 @@ li {
   border: 0.1rem solid;
   border-radius: 0.3rem;
   display: inline;
+  margin: 0rem 1rem;
+  position: absolute;
+  top: 0;
+  right: 2rem;
 }
 
 .cursorPointer {
@@ -77,6 +90,14 @@ li {
 
 .disableButton {
   background-color: #747474;
+}
+
+.disableButton:hover {
+  background-color: #747474;
+}
+
+.disableButton:active {
+  transform: none;
 }
 
 .lineThrough {

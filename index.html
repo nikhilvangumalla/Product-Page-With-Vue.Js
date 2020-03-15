@@ -8,45 +8,13 @@
   </head>
   <body>
     <div id="app">
-      <div class="product">
-        <div class="product__image">
-          <img :src="image" :alt="productName" />
-        </div>
-        <div class="product__info">
-          <h1>{{productName}}</h1>
-          <p v-if="inStock">In Stock</p>
-          <p v-else class="lineThrough">Out of Stock</p>
-          <h3>Features</h3>
-          <ul>
-            <li v-for="detail in details">{{detail}}</li>
-          </ul>
-          <div
-            v-for="(varient, index) in varients"
-            :key="varient.id"
-            class="cursorPointer colorRound"
-            :style="{backgroundColor: varient.color}"
-            @mouseover="updateProduct(index)"
-          ></div>
-          <br />
-          <button
-            class="btn cursorPointer"
-            v-on:click="cart +=1"
-            :disabled="!inStock"
-            :class="{disableButton: !inStock}"
-          >
-            Add to Cart
-          </button>
-          <div class="cart">cart ({{cart}})</div>
-          <button
-            class="btn cursorPointer"
-            @click="removeFromCart"
-            :disabled="!cart"
-            :class="{disableButton: !cart}"
-          >
-            Remove from Cart
-          </button>
-        </div>
-      </div>
+      <div class="cart">cart ({{cart.length}})</div>
+      <Product
+        :premium="premium"
+        :cart="cart"
+        @add-to-cart="updateCart"
+        @remove-from-cart="removeFromCartGlobal"
+      ></Product>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
